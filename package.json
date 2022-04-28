@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ArturoMendozaA/Buzzing#readme",
   "devDependencies": {
+    "@types/jest": "^27.4.1",
     "jest": "^28.0.2"
   }
 }
