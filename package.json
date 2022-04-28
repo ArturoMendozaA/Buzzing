@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ArturoMendozaA/Buzzing/issues"
   },
-  "homepage": "https://github.com/ArturoMendozaA/Buzzing#readme"
+  "homepage": "https://github.com/ArturoMendozaA/Buzzing#readme",
+  "devDependencies": {
+    "jest": "^28.0.2"
+  }
 }
