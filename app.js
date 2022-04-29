@@ -2,17 +2,18 @@ const fs = require("fs");
 
 //[ ] Part 1 Read json file ===========================
 const rawdata = fs.readFileSync("explorers.json");
-const explorers = JSON.parse(rawdata);
-//NOTE console.log(explorers)
-//NOTE console.log(explorers.length)
+const explorers = JSON.parse(rawdata);//NOTE lista de explorers de archivo JSON
+//NOTE console.log("Objeto creado con JSON.parse: ", explorers)
+//NOTE console.log("Número de explorers en lista: ", explorers.length)
 
 
 //[ ] Part 2: Get the quantity of explorers names in node
 const explorersInNode = explorers.filter((explorer) => explorer.mission == "node");
 
 
-//NOTE console.log(explorersInNode.length)
-//NOTEconsole.log(explorersInNode)
+//NOTE console.log("Número de explorers despues de filtro 'node': "explorersInNode.length)
+//NOTE
+ console.log("Objeto después de filtro 'node': ",explorersInNode)
 // Prueba del filter Como sería
 //[ ] Part4: Get the explorer's usernames in Node
 const explorersInNodeToGetUsernames = explorers.filter((explorer) => explorer.mission == "node");
