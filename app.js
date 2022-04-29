@@ -1,14 +1,20 @@
 const fs = require("fs");
 
-// Part 1 Read json file ===========================
+//[ ] Part 1 Read json file ===========================
 const rawdata = fs.readFileSync("explorers.json");
 const explorers = JSON.parse(rawdata);
+//NOTE console.log(explorers)
+//NOTE console.log(explorers.length)
 
-// Part 2: Get the quantity of explorers names in node
+
+//[ ] Part 2: Get the quantity of explorers names in node
 const explorersInNode = explorers.filter((explorer) => explorer.mission == "node");
-//console.log(explorersInNode.length)
 
-// Part4: Get the explorer's usernames in Node
+
+//NOTE console.log(explorersInNode.length)
+//NOTEconsole.log(explorersInNode)
+// Prueba del filter Como sería
+//[ ] Part4: Get the explorer's usernames in Node
 const explorersInNodeToGetUsernames = explorers.filter((explorer) => explorer.mission == "node");
 const usernamesInNode = explorersInNodeToGetUsernames.map((explorer) => explorer.githubUsername);
 //console.log(usernamesInNode)
