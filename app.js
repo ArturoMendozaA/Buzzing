@@ -1,25 +1,24 @@
 const fs = require("fs");
 
-//[ ] Part 1 Read json file ===========================
+// Part 1 Read json file ===========================
 const rawdata = fs.readFileSync("explorers.json");
-const explorers = JSON.parse(rawdata);//NOTE lista de explorers de archivo JSON
-//NOTE console.log("Objeto creado con JSON.parse: ", explorers)
-//NOTE console.log("Número de explorers en lista: ", explorers.length)
+const explorers = JSON.parse(rawdata);//[x] lista de explorers de archivo JSON
+//[ ] console.log("Objeto creado con JSON.parse: ", explorers)
+//[ ] console.log("Número de explorers en lista: ", explorers.length)
 
 
-//[ ] Part 2: Get the quantity of explorers names in node
-const explorersInNode = explorers.filter((explorer) => explorer.mission == "node");
+// Part 2: Get the quantity of explorers names in node
+const explorersInNode = explorers.filter((explorer) => explorer.mission == "node");//[x]filtra explorers por node
 
+//[ ]console.log("Número de explorers despues de filtro 'node': ", explorersInNode.length)
+//NOTE ¿Como haría una prueba del filtro?
+ //[ ]console.log("Objeto después de filtro 'node': ",explorersInNode)
+// Part4: Get the explorer's usernames in Node
+const explorersInNodeToGetUsernames = explorers.filter((explorer) => explorer.mission == "node");//[x]mismo filtro, difente nombre
+const usernamesInNode = explorersInNodeToGetUsernames.map((explorer) => explorer.githubUsername);//[x]cre
 
-//NOTE console.log("Número de explorers despues de filtro 'node': "explorersInNode.length)
-//NOTE
- console.log("Objeto después de filtro 'node': ",explorersInNode)
-// Prueba del filter Como sería
-//[ ] Part4: Get the explorer's usernames in Node
-const explorersInNodeToGetUsernames = explorers.filter((explorer) => explorer.mission == "node");
-const usernamesInNode = explorersInNodeToGetUsernames.map((explorer) => explorer.githubUsername);
-
-//NOTEconsole.log(usernamesInNode)
+//[ ]
+console.log(usernamesInNode)
 
 // DEAD CODE: Part 5,6,7, please remove this and go to Part 8!
 
