@@ -2,7 +2,7 @@ const fs = require("fs");
 
 // Part 1 Read json file ===========================
 const rawdata = fs.readFileSync("explorers.json");
-const explorers = JSON.parse(rawdata);//[x] lista de explorers de archivo JSON
+const explorers = JSON.parse(rawdata);//[x] array de explorers de archivo JSON
 //[ ] console.log("Objeto creado con JSON.parse: ", explorers)
 //[ ] console.log("Número de explorers en lista: ", explorers.length)
 
@@ -15,10 +15,9 @@ const explorersInNode = explorers.filter((explorer) => explorer.mission == "node
  //[ ]console.log("Objeto después de filtro 'node': ",explorersInNode)
 // Part4: Get the explorer's usernames in Node
 const explorersInNodeToGetUsernames = explorers.filter((explorer) => explorer.mission == "node");//[x]mismo filtro, difente nombre
-const usernamesInNode = explorersInNodeToGetUsernames.map((explorer) => explorer.githubUsername);//[x]cre
+const usernamesInNode = explorersInNodeToGetUsernames.map((explorer) => explorer.githubUsername);//[x]crea un array con el resultado de una función llamada, en este caso el githubUsername
 
-//[ ]
-console.log(usernamesInNode)
+//[ ] console.log(usernamesInNode)
 
 // DEAD CODE: Part 5,6,7, please remove this and go to Part 8!
 
@@ -27,8 +26,8 @@ console.log(usernamesInNode)
 // Score: 4, Trick: 4.
 // Score: 5, Trick: 5.
 
-const assignFizzTrick = function(explorer){
-    if(explorer.score%3 === 0){
+const assignFizzTrick = function(explorer){//[x] Guarda una funcion dentro de una variable
+    if(explorer.score %3 === 0){
         explorer.trick = "FIZZ";
         return explorer;
     }else{
@@ -37,7 +36,7 @@ const assignFizzTrick = function(explorer){
     }
 };
 
-const explorersInNodeAndFizzTrick = explorersInNode.map((explorer) => assignFizzTrick(explorer));
+const explorersInNodeAndFizzTrick = explorersInNode.map((explorer) => assignFizzTrick(explorer)); //[x] el nombre de los explorers node filtrados, se pasan como payload al metodo assignFizzTrick
 
 // Part 6: Get a new list of explorers in node if the score number is divisible by 5, we need to set a new property called trick and set the value BUZZ, if not this value should be just the score
 //
@@ -51,7 +50,7 @@ const assignBuzzTrick = function(explorer){
     }
 };
 
-const explorersInNodeAndBuzzTrick = explorersInNode.map((explorer) => assignBuzzTrick(explorer));
+const explorersInNodeAndBuzzTrick = explorersInNode.map((explorer) => assignBuzzTrick(explorer));//[x] nombre de los explorers node al método buzz
 
 //Part7: Get a new list of explorers in Node, if the score number is divisible by 3 AND by 5 we need to set a new property called FIZZBUZZ, if not this value should be the same score value
 
@@ -65,6 +64,6 @@ const assignFizzBuzzTrick = function(explorer){
     }
 };
 
-const explorersInNodeAndFizzBuzzTrick = explorersInNode.map((explorer) => assignFizzBuzzTrick(explorer));
+const explorersInNodeAndFizzBuzzTrick = explorersInNode.map((explorer) => assignFizzBuzzTrick(explorer));//[x] nombre de los explorers filtrados al método buzztrick
 
 // Part 8: Get a list of the explorers in node, if the score is divisible by 5 and 3, set the property trick and the value FIZZBUZZ, if is just divisible by 5 set the property trcik and the value BUZZ, if is just divisible by 3 set the property trick and the value FIZZ, otherwise set the property trick and the score value. TODO
