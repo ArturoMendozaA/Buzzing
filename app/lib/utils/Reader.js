@@ -7,3 +7,4 @@ class Reader{
         returns
     }
 }
+module.exports = Reader
