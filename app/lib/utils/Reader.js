@@ -5,7 +5,6 @@ class Reader{
         const rawdata = fs.readFileSync(jsonFile);
         const Explorers = JSON.parse(rawdata);
         return Explorers
-        
     }
 }
 module.exports = Reader
