@@ -1,6 +1,6 @@
 const Reader = require('./../../../app/lib/utils/Reader.js')
 describe('Test for Reader', () => {
-    test('Check if it returns a name contained in the json file', () => {
+    test('Check if theres some expected objects inside the array', () => {
         const jsonFile = ('explorers-copy.json')
         const explorersObject = Reader.objectifying (jsonFile)
         const expected = [{"githubUsername": "ajolonauta1", "mission": "node", "name": "Woopa1"}];
