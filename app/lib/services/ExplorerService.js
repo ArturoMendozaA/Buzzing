@@ -11,7 +11,9 @@ class ExplorerService{
         return numEplorersInNode.length
     }
     static getExplorersUsernamesByMission(explorers, mission){
-        const explorersInNodeToGetUsernames = ExplorerService.getAmountOfExplorersByMission(explorers, mission)
+        const explorerUsername = ExplorerService.getAmountOfExplorersByMission(explorers, mission)
+        const githubUsername = explorerUsername.map((explorer) => explorer.githubUsername)
+        return githubUsername
     }
 }
 module.exports = ExplorerService
