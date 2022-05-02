@@ -11,13 +11,15 @@ describe('Test for ExplorerService', () => {
         const explorers = ('explorers-copy.json')
         const mission = ('node')
         const numExplorersInNode = ExplorerService.getAmountOfExplorersByMission(explorers, mission)
-        expect(numExplorersInNode).toBe(10)
+        expect(numExplorersInNode.length).toBe(10)
     })
     test('3) Test if it returns an expected name', () => {
         const explorers = ('explorers-copy.json')
         const mission = ('node')
         const nameExplorersInNode = ExplorerService.getExplorersUsernamesByMission(explorers, mission)
-        expect(nameExplorersInNode).toEqual(expect.objectContaining({"githubUsername": "ajolonauta1"}))
-        
+        expect(nameExplorersInNode)
+        //.toEqual(expect.objectContaining({"githubUsername": "ajolonauta1"}))
+        .toEqual(expect.arrayContaining(["ajolonauta1"])
+    )
     })
 })
