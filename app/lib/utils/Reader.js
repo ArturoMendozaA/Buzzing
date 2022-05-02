@@ -3,8 +3,8 @@ const fs = require("fs");
 class Reader{
     static readJsonFile(jsonFile){
         const rawdata = fs.readFileSync(jsonFile);
-        const Explorers = JSON.parse(rawdata);
-        return Explorers
+        return JSON.parse(rawdata);
+        
     }
 }
 module.exports = Reader
