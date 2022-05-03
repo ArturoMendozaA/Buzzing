@@ -5,7 +5,7 @@ describe('Test for ExplorerService', () => {
         const explorers = ('explorers-copy.json')
         const mission = ('node')
         const explorersInNode = ExplorerService.filterByMission(explorers,mission)
-        expect(explorersInNode.length).toBe(110)
+        expect(explorersInNode.length).toBe(10)
     })
     test('2) Returns the number of explorers',() => {
         const explorers = ('explorers-copy.json')
