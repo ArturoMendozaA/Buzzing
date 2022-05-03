@@ -1,6 +1,6 @@
            
 // DEAD CODE: Part 5,6,7, please remove this and go to Part 8!
-
+ 
 // Part 5: Get a new list of explorers in node, if the score numbers is divisible by 3, I need a new propery called trick, and the value assigned is FIZZ, if not the value should be the score itself.
 // Score: 3, Trick: FIZZ.
 // Score: 4, Trick: 4.
