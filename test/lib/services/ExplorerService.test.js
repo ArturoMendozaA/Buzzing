@@ -18,7 +18,6 @@ describe('Test for ExplorerService', () => {
         const mission = ('node')
         const nameExplorersInNode = ExplorerService.getExplorersUsernamesByMission(explorers, mission)
         expect(nameExplorersInNode)
-        //.toEqual(expect.objectContaining({"githubUsername": "ajolonauta1"}))
         .toEqual(expect.arrayContaining(["ajolonauta1"])
     )
     })
