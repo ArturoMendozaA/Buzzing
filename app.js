@@ -1,23 +1,3 @@
-const fs = require("fs");
-
-// Part 1 Read json file ===========================
-const rawdata = fs.readFileSync("explorers.json");
-const explorers = JSON.parse(rawdata);//[x] array de explorers de archivo JSON
-//[ ] console.log("Objeto creado con JSON.parse: ", explorers)
-//[ ] console.log("Número de explorers en lista: ", explorers.length)
-
-
-// Part 2: Get the quantity of explorers names in node
-const explorersInNode = explorers.filter((explorer) => explorer.mission == "node");//[x]filtra explorers por node
-
-//[ ]console.log("Número de explorers despues de filtro 'node': ", explorersInNode.length)
-//NOTE ¿Como haría una prueba del filtro?
- //[ ]console.log("Objeto después de filtro 'node': ",explorersInNode)
-// Part4: Get the explorer's usernames in Node
-const explorersInNodeToGetUsernames = explorers.filter((explorer) => explorer.mission == "node");//[x]mismo filtro, difente nombre
-const usernamesInNode = explorersInNodeToGetUsernames.map((explorer) => explorer.githubUsername);//[x]crea un array con el resultado de una función llamada, en este caso el githubUsername
-
-//[ ] console.log(usernamesInNode)
 
 // DEAD CODE: Part 5,6,7, please remove this and go to Part 8!
 
