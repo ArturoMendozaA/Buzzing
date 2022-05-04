@@ -31,7 +31,7 @@ const assignBuzzTrick = function(explorer){
 };
 
 const explorersInNodeAndBuzzTrick = explorersInNode.map((explorer) => assignBuzzTrick(explorer));//[x] nombre de los explorers node al método buzz
-//[ ] console.log(explorersInNodeAndBuzzTrick)
+//[ ] console.log(explorersInNodeAndBuzzTrick) 
 //Part7: Get a new list of explorers in Node, if the score number is divisible by 3 AND by 5 we need to set a new property called FIZZBUZZ, if not this value should be the same score value
 
 const assignFizzBuzzTrick = function(explorer){
