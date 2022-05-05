@@ -1,1 +1,1 @@
-const ExplorerService = require('./../services/ExplorerService')
+const ExplorerService = require("./../services/ExplorerService");
