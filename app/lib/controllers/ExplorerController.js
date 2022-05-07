@@ -5,7 +5,7 @@ const FizzbuzzService = require("./../services/FizzbuzzService");
 
 class ExplorerController{
     static getExplorersByMission(mission){
-        const explorers = Reader.readJsonFile("explorers.json");
+        const explorers = Reader.readJsonFile("./../explorers.json");
         return ExplorerService.filterByMission(explorers, mission);
 
 }
