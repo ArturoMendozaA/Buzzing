@@ -1,8 +1,8 @@
 const fs = require("fs");
 //const explorers = JSON.parse(rawdata);
 class Reader{
-    static readJsonFile(jsonFile){
-        const rawdata = fs.readFileSync(jsonFile);
+    static readJsonFile(path){
+        const rawdata = fs.readFileSync(path);
         return JSON.parse(rawdata);
         
     }
