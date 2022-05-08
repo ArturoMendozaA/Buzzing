@@ -6,4 +6,9 @@ const ExplorerController = require("./../../../app/lib/controllers/ExplorerContr
      const explorerInNode = ExplorerController.getExplorersByMission(mission);
         expect(explorerInNode.length).toBe(10);
      })
+     test("2) Get explorers name by mission", () => {
+         const mission =("node")
+        const explorerNames = ExplorerController.getExplorersUsernamesByMission(mission)
+        expect(explorerNames.length).toBe(10)
+     })
  })
