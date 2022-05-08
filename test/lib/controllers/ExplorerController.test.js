@@ -11,4 +11,9 @@ const ExplorerController = require("./../../../app/lib/controllers/ExplorerContr
         const explorerNames = ExplorerController.getExplorersUsernamesByMission(mission)
         expect(explorerNames.length).toBe(10)
      })
+     test("3) Get explorers amount by mission", () => {
+         const mission = ("node")
+         const explorersAmount = ExplorerController.getExplorersAmountByMission(mission)
+         expect(explorersAmount).toBe(10)
+     })
  })
