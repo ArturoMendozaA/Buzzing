@@ -24,3 +24,14 @@ class FizzbuzzService {
   +applyValidationInExplorer(explorers, mission)
   }
 ```
+## Parte 2 Creacion de una API para desplegar las funciones
+Creamos nuestro endpoint localhost:3000/v1/explorers/:mission en mission podemos ingresar node o java
+
+```mermaid
+classDiagram
+class Endpoint{
+String localhost:3000/v1/explorers/:mission -->  localhost:3000/v1/explorers/node
+String localhost:3000/v1/explorers/amount/:mission --> localhost:3000/v1/explorers/amount/node
+String localhost:3000/v1/explorers/usernames/:mission --> localhost:3000/v1/explorers/usernames/node
+}
+```
